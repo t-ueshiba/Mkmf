@@ -40,7 +40,7 @@ else ifeq ($(shell arch), aarch64)
 endif
 
 ifneq ($(findstring nvcc,$(CXX)),)
-  CCFLAGS      += -std=c++14
+  CCFLAGS      += -std=c++17
   PIC		=
 else
   CCFLAGS      += -std=c++1y
@@ -49,7 +49,7 @@ else
   endif
 endif
 
-NVCCFLAGS      += -std=c++14 -Xcompiler -std=c++1y
+NVCCFLAGS      += -std=c++17 --extended-lambda
 
 #LDFLAGS	       += -march=armv7-a -mfloat-abi=softfp -mfpu=neon
 
