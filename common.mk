@@ -43,7 +43,7 @@ ifneq ($(findstring nvcc,$(CXX)),)
   CCFLAGS      += -std=c++17
   PIC		=
 else
-  CCFLAGS      += -std=c++1y
+  CCFLAGS      += -std=c++17
   ifneq ($(findstring icpc,$(CXX)),)
     LIBS       += -lsvml -lintlc
   endif
